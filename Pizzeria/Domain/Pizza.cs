@@ -27,8 +27,7 @@ namespace Domain
             {
                 Name = dtoPizza.Name,
                 Photo = dtoPizza.Photo,
-                Id_Ingredient = dtoPizza.Id_Ingredient,
-                Id_Comment = dtoPizza.Id_Comment
+                Id_Ingredient = dtoPizza.Id_Ingredient
             };
 
             return pizza;

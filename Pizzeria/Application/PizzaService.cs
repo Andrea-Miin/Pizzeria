@@ -27,6 +27,7 @@ namespace Infrastructure
 
             var pizza = contextPizzaShop.Pizza.Add(entity);
             contextPizzaShop.SaveChanges();
+            contextPizzaShop.Dispose();
             return pizza;
         }
     }
