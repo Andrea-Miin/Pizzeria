@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
-    public class Class1
+    public class DtoPizza
     {
     }
 }
