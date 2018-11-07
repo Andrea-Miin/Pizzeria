@@ -11,11 +11,27 @@ namespace Domain
     {
         [Required]
         public string Name { get; set; }
-        public virtual ICollection<Ingredient> Id_Ingredient { get; set; }
-        public virtual ICollection<Comment> Id_Comment { get; set; }
+        public ICollection<Ingredient> Id_Ingredient { get; set; }
+        public ICollection<Comment> Id_Comment { get; set; }
         [Required]
         public byte[] Photo { get; set; }
-        [Required]
-        public decimal Price { get; set; }
+
+        public decimal Price()
+        {
+            return this.Id_Ingredient.Sum(c => c.Price) + decimal.Parse("5");
+        }
+
+        public static Pizza CreatePizza (DtoPizza dtoPizza)
+        {
+            var pizza = new Pizza()
+            {
+                Name = dtoPizza.Name,
+                Photo = dtoPizza.Photo,
+                Id_Ingredient = dtoPizza.Id_Ingredient,
+                Id_Comment = dtoPizza.Id_Comment
+            };
+
+            return pizza;
+        }
     }
 }
