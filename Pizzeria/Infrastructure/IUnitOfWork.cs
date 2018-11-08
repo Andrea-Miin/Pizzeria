@@ -10,6 +10,6 @@ namespace Infrastructure
     {
         Task<int> SaveChangesAsync(CancellationToken cancellationToken); 
         Task<int> SaveChangesAsync();
-        void SaveChanges();
+        int SaveChanges();
     }
 }

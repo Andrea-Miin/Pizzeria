@@ -8,7 +8,7 @@ using Domain;
 
 namespace Infrastructure
 {
-    public interface IContextPizzaShop : IUnitOfWork
+    public interface IPizzeriaContext : IUnitOfWork
     {
         IDbSet<Pizza> Pizza { get; set; }
         IDbSet<Ingredient> Ingredient { get; set; }
