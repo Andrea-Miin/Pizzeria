@@ -3,26 +3,22 @@
     using System;
     using System.Data.Entity;
     using System.Linq;
+    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
 
     public class EntityBase : DbContext
     {
+        [Required]
         public Guid Id { get; set; }
 
-        public EntityBase()
-            : base("name=EntityBase")
+        public virtual bool IsValid()
         {
-        }
-
-        // Boolean. Manual validation data annotation.
-        public void IsValid()
-        {
-            //TODO
-        }
-
-        // Errors dictionary. Crear nuevo error (throw).
-        public void Error()
-        {
-            throw new Exception("Error");
+            // Hay que quitar pizza
+            // Si se llama al metodo IsValid() deberiamos cambiarlo por this?
+            var context = new ValidationContext(this, serviceProvider: null, items: null);
+            var results = new List<ValidationResult>();
+            var validator = Validator.TryValidateObject(this, context, results);
+            return validator;
         }
     }
 }
