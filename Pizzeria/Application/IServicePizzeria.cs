@@ -7,8 +7,8 @@ using Domain;
 
 namespace Application
 {
-    public interface IPizzaService
+    public interface IServicePizzeria
     {
         Pizza Add(DtoPizza entity);
     }
-}
+} 

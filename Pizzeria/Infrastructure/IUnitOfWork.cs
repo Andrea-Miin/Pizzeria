@@ -8,7 +8,7 @@ namespace Infrastructure
 {
     public interface IUnitOfWork : IDisposable
     {
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken); 
         Task<int> SaveChangesAsync();
         void SaveChanges();
     }
