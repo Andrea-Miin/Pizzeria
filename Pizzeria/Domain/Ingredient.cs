@@ -11,6 +11,6 @@ namespace Domain
         public string Name { get; set; }
         public decimal Price { get; set; }
         public Pizza Pizza { get; set; }
-        static void create() { }
+        
     }
 }
