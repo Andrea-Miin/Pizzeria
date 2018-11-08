@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 
 namespace Domain
 {
@@ -18,7 +19,8 @@ namespace Domain
 
         public decimal Price()
         {
-            return this.Id_Ingredient.Sum(c => c.Price) + decimal.Parse("5");
+            var total = this.Id_Ingredient.Sum(c => c.Price) + decimal.Parse(ConfigurationManager.AppSettings["profit"]);
+            return total;
         }
 
         public static Pizza CreatePizza (DtoPizza dtoPizza)
