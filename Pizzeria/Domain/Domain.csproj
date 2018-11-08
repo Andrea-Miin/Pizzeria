@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="DtoPizza.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="Ingredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
