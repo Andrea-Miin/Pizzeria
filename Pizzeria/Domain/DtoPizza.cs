@@ -6,6 +6,6 @@ namespace Domain
     {
         public string Name { get; set; }
         public byte[] Photo { get; set; }
-        public ICollection<Ingredient> Id_Ingredient { get; set; }
+        public ICollection<Ingredient> Collection_Ingredient { get; set; }
     }
 }

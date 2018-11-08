@@ -10,26 +10,32 @@ namespace Domain
 {
     public class Pizza : EntityBase
     {
+        public Pizza()
+        {
+            this.Collection_Ingredient = new HashSet<Ingredient>();
+            this.Collection_Comment = new HashSet<Comment>();
+        }
+
         [Required]
         public string Name { get; set; }
-        public ICollection<Ingredient> Id_Ingredient { get; set; }
-        public ICollection<Comment> Id_Comment { get; set; }
+        public ICollection<Ingredient> Collection_Ingredient { get; set; }
+        public ICollection<Comment> Collection_Comment { get; set; }
         [Required]
         public byte[] Photo { get; set; }
 
         public decimal Price()
         {
-            var total = this.Id_Ingredient.Sum(c => c.Price) + decimal.Parse(ConfigurationManager.AppSettings["profit"]);
+            decimal total = this.Collection_Ingredient.Sum(c => c.Price) + decimal.Parse(ConfigurationManager.AppSettings["profit"]);
             return total;
         }
 
-        public static Pizza CreatePizza (DtoPizza dtoPizza)
+        public static Pizza CreatePizza(DtoPizza dtoPizza)
         {
             var pizza = new Pizza()
             {
                 Name = dtoPizza.Name,
                 Photo = dtoPizza.Photo,
-                Id_Ingredient = dtoPizza.Id_Ingredient
+                Collection_Ingredient = dtoPizza.Collection_Ingredient
             };
 
             return pizza;
