@@ -14,9 +14,15 @@
         }
 
         // Boolean. Manual validation data annotation.
-        public void IsValid() { }
+        public void IsValid()
+        {
+            //TODO
+        }
 
         // Errors dictionary. Crear nuevo error (throw).
-        public void Error() { }
+        public void Error()
+        {
+            throw new Exception("Error");
+        }
     }
 }
