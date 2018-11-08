@@ -43,6 +43,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,7 +57,9 @@
     <Compile Include="Comment.cs" />
     <Compile Include="DtoPizza.cs" />
     <Compile Include="EntityBase.cs" />
+    <Compile Include="DtoPizza.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="Ingredient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
