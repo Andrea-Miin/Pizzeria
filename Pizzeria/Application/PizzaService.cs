@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Domain;
 using Infrastructure;
 
-namespace Infrastructure
+namespace Application
 {
     public class PizzaService : IPizzaService
     {
@@ -27,7 +27,7 @@ namespace Infrastructure
 
             var pizza = contextPizzaShop.Pizza.Add(entity);
             contextPizzaShop.SaveChanges();
-            contextPizzaShop.Dispose();
+
             return pizza;
         }
     }
