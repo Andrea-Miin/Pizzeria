@@ -15,7 +15,7 @@ namespace Application
         public ServicePizzeria(IContextPizzaShop context)
         {
             _context = context;
-        }
+        } 
 
         public Pizza Add(DtoPizza command)
         {
