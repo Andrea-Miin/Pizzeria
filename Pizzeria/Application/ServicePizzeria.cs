@@ -10,9 +10,9 @@ namespace Application
 {
     public class ServicePizzeria : IServicePizzeria
     {
-        private readonly IPizzeriaContext _context;
+        private readonly IContextPizzaShop _context;
 
-        public ServicePizzeria(IPizzeriaContext context)
+        public ServicePizzeria(IContextPizzaShop context)
         {
             _context = context;
         } 

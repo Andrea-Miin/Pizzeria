@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    class Comment : EntityBase
+    public class Comment : EntityBase
     {
         [Required]
         public string Text { get; set; }

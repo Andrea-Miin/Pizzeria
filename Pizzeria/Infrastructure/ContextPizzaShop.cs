@@ -5,13 +5,13 @@
     using System.Data.Entity;
     using System.Linq;
 
-    public class PizzeriaContext : DbContext, IPizzeriaContext
+    public class ContextPizzaShop : DbContext, IContextPizzaShop
     {
-        public IDbSet<Pizza> Pizzas { get; set; }
-        public IDbSet<Ingredient> Ingredients { get; set; }
-        public IDbSet<Comment> Comments { get; set; }
+        public IDbSet<Pizza> Pizza { get; set; }
+        public IDbSet<Ingredient> Ingredient { get; set; }
+        public IDbSet<Comment> Comment { get; set; }
 
-        public PizzeriaContext()
+        public ContextPizzaShop()
             : base("name=ContextPizzaShop")
         {
         }

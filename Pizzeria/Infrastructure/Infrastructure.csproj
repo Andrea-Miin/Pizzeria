@@ -52,8 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="IPizzeriaContext.cs" />
-    <Compile Include="PizzeriaContext.cs" />
+    <Compile Include="IContextPizzaShop.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ContextPizzaShop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
