@@ -1,6 +1,7 @@
 namespace Infrastructure.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,9 +15,9 @@ namespace Infrastructure.Migrations
 
         protected override void Seed(Infrastructure.ContextPizzaShop context)
         {
-            if (!context.Ingredients.Any())
+            if (!context.Ingredient.Any())
             {
-                context.Ingredients.AddOrUpdate
+                context.Ingredient.AddOrUpdate
                 (
                     new Domain.Ingredient { Name = "Masa", Price = 0.5M },
                     new Domain.Ingredient { Name = "Queso", Price = 0.4M },
